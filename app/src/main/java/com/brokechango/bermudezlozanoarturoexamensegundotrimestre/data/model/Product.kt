@@ -1,12 +1,13 @@
 package com.brokechango.bermudezlozanoarturoexamensegundotrimestre.data.model
 
+import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 import kotlinx.serialization.Serializable
 
 @JsonClass(generateAdapter = true)
 @Serializable
 data class Product(
-    val id: Int,
+    @Json(name = "_id")val id: String,
     val name: String,
     val description: String,
     val price: String,
